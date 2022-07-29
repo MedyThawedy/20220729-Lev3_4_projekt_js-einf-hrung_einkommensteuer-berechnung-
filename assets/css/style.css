@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.art1 {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.art1 input,
+button {
+    width: 100px;
+}
+
+.art2 {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.art2 input {
+    width: 300px;
+}
+
+textarea {
+    width: 200px;
+}
+
+.art1,
+.art2,
+h1 {
+    margin-left: 5vw;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Einkommensteuer-Berechnung</h1>
+    </header>
+
+    <article class="art1">
+        <label for="zve">Sind Sie eine allein­stehende Person </label>
+        <div>
+            <label for="rJa">Ja</label>
+            <input type="radio" name="rJaNein" id="rJa" value="ja" checked="checked" onclick="fn_hide_splitting_div()">
+            <label for=" rNein">Nein</label>
+            <input type="radio" name="rJaNein" id="rNein" value="nein" onclick="fn_show_splitting_div()">
+        </div>
+
+        <div id="splitting_div" style="display:none;">
+            <label for=""></label> Mit wie vielen Personen?</label>
+            <input type="number" id="idAnzahlPeronen">
+            <label for="">Einkommen erste Person</label><input type="number">
+            <label for="">Einkommen zweite Person</label><input type="number">
+
+        </div>
+
+        <label for="zve">Geben Sie bitte Ihren das zu versteuernden Einkommen</label>
+        <input type="number" id="inputZve">
+
+        <button onclick="fn_tarif_check()">Daten schicken!</button>
+
+    </article>
+
+    <article class="art2">
+        Ihre Daten
+        <textarea name="" id="" cols="30" rows="10" disabled></textarea>
+        Einkommensteuer
+        <input type="number" id="outputEst" disabled>
+    </article>
+
+    <footer></footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
