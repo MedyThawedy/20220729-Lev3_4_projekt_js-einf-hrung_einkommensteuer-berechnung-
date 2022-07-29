@@ -6,6 +6,9 @@
 
 body {
     font-family: 'Karla';
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 .art1 {
@@ -67,6 +70,9 @@ h1 {
     padding-left: 10px;
     padding-top: 2.5vh;
     padding-bottom: 2.5vh;
+    border-radius: 5px;
+    padding-left: 22px;
+
 }
 
 button {
