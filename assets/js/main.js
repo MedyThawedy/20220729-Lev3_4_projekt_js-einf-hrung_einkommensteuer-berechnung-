@@ -30,6 +30,11 @@ function fn_tarif_check() {
     outputStr = "Tarif = " + tarif + "\n";
     // Zve einen Wert zuweisen und konvertieren
     zve = document.getElementById('inputZve').value;
+
+    if (zve === '') {
+        alert('Bitte Einkommen eingeben!!!!');
+    }
+
     fn_berechne_est(parseInt(zve), tarif, outputStr);
 
 }
@@ -98,6 +103,6 @@ function fn_show_splitting_hinweis() {
 }
 
 function fn_hide_splitting_hinweis() {
-    document.getElementById('lHinweise').innerHTML = 'Geben Sie bitte Ihren das zu versteuernden Einkommen ein ';
+    document.getElementById('lHinweise').innerHTML = 'Zu versteuerndes Einkommen:';
     document.getElementById('lHinweise').style.color = 'Black';
 }

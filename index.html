@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
     <title>Document</title>
 </head>
 
@@ -30,8 +31,10 @@
             <label for="">Einkommen zweite Person</label><input type="number">
         </div>
         -->
-        <label for="zve" id="lHinweise">Zu versteuerndes Einkommen:</label>
-        <input type="number" id="inputZve">
+        <div>
+            <label for="zve" id="lHinweise">Zu versteuerndes Einkommen:</label>
+            <input type="number" id="inputZve">
+        </div>
         <button onclick="fn_tarif_check()">Berechnen</button>
 
     </article>
@@ -39,11 +42,11 @@
     <article class="art2">
         Ihre Daten
         <textarea name="" id="idTextAreaOutput" cols="30" rows="10" disabled></textarea>
-        Einkommensteuer
+        <label> Einkommensteuer: </label>
         <input type="number" id="outputEst" disabled>
     </article>
 
-    <footer></footer>
+    <footer>© Einkommensteuer-Berechnung</footer>
 
     <script src="./assets/js/main.js"></script>
 </body>
