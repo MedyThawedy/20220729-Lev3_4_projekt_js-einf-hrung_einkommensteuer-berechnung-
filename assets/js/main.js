@@ -62,6 +62,7 @@ function fn_berechne_est(zve, tarif) {
         est = 0;
         console.log(`est = ${est} = Fall 1 zu versteuernde Einkommen kleiner als oder gleich 9.744`);
         document.getElementById('outputEst').value = est;
+        document.getElementById('idTextAreaOutput').value = est;
     }
     // Fall 2 zu versteuernde Einkommen im Bereich von 9745 bis 14753 
     else if ((zve >= 9745) || (zve <= 14753)) {
@@ -71,6 +72,7 @@ function fn_berechne_est(zve, tarif) {
 
         console.log(`est = ${est} = Fall 2 zu versteuernde Einkommen im Bereich von 9745 bis 14753`);
         document.getElementById('outputEst').value = est;
+        document.getElementById('idTextAreaOutput').value = est;
     }
     //Fall 3
     else if ((zve >= 14754) || (zve <= 57918)) {
@@ -80,6 +82,7 @@ function fn_berechne_est(zve, tarif) {
 
         console.log(`est = ${est} = Fall 3 zu versteuernde Einkommen im Bereich von 14754 bis 57918`);
         document.getElementById('outputEst').value = est;
+        document.getElementById('idTextAreaOutput').value = est;
     }
     //Fall 4
     else if ((zve >= 57919) || (zve <= 274612)) {
@@ -88,6 +91,7 @@ function fn_berechne_est(zve, tarif) {
 
         console.log(`est = ${est} = Fall 4 zu versteuernde Einkommen im Bereich von 57919 bis 274612`);
         document.getElementById('outputEst').value = est;
+        document.getElementById('idTextAreaOutput').value = est;
     }
 
     //Fall 5
@@ -97,6 +101,7 @@ function fn_berechne_est(zve, tarif) {
 
         console.log(`est = ${est} = Fall 5 zu versteuernde Einkommen im Bereich von 274613`);
         document.getElementById('outputEst').value = est;
+        document.getElementById('idTextAreaOutput').value = est;
     }
 
 
