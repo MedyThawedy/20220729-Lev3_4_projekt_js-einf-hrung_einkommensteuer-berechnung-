@@ -18,7 +18,8 @@ function fn_tarif_check() {
 
     // https://blog.devgenius.io/how-to-get-the-value-of-a-selected-radio-button-with-javascript-e5ac43a6f41a
 
-    const jaOderNein = document.querySelectorAll('input[name="rJaNein"]')
+    const jaOderNein = document.querySelectorAll('input[name="rJaNein"]');
+
     for (const f of jaOderNein) {
         if (f.checked) {
             console.log(f.value);
@@ -48,6 +49,7 @@ function fn_tarif_check() {
 
 function fn_berechne_est(zve, tarif) {
     console.log('fn_berechne_est wurde aufgerufen und zve = ' + zve);
+    console.log('Tarif = ' + tarif);
     if (tarif == 'Splittingtarif') {
         zve = zve / 2;
         console.log('zve after splitting =' + zve)
@@ -65,7 +67,7 @@ function fn_berechne_est(zve, tarif) {
         document.getElementById('idTextAreaOutput').value = est;
     }
     // Fall 2 zu versteuernde Einkommen im Bereich von 9745 bis 14753 
-    else if ((zve >= 9745) || (zve <= 14753)) {
+    else if ((zve >= 9745) && (zve <= 14753)) {
         let y = ((zve - 9744) / 10000);
         console.log(`y = ${y}`);
         est = (((995.21 * y) + 1400) * y);
@@ -75,17 +77,17 @@ function fn_berechne_est(zve, tarif) {
         document.getElementById('idTextAreaOutput').value = est;
     }
     //Fall 3
-    else if ((zve >= 14754) || (zve <= 57918)) {
+    else if ((zve >= 14754) && (zve <= 57918)) {
         let z = ((zve - 14753) / 10000);
         console.log(`z = ${z}`);
-        est = (((208.85 * z) + 2397) * (z + 950, 96));
+        est = (((208.85 * z) + 2397) * z) + 950, 96;
 
         console.log(`est = ${est} = Fall 3 zu versteuernde Einkommen im Bereich von 14754 bis 57918`);
         document.getElementById('outputEst').value = est;
         document.getElementById('idTextAreaOutput').value = est;
     }
     //Fall 4
-    else if ((zve >= 57919) || (zve <= 274612)) {
+    else if ((zve >= 57919) && (zve <= 274612)) {
 
         est = (0.42 * zve) - 9136.63;
 
@@ -98,7 +100,6 @@ function fn_berechne_est(zve, tarif) {
     else if ((zve >= 274613)) {
 
         est = (0.45 * zve) - 17374.99;
-
         console.log(`est = ${est} = Fall 5 zu versteuernde Einkommen im Bereich von 274613`);
         document.getElementById('outputEst').value = est;
         document.getElementById('idTextAreaOutput').value = est;
