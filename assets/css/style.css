@@ -83,6 +83,11 @@ button {
     border: 1px solid #2196f3;
 }
 
+button:hover {
+    background-color: #00589b;
+    cursor: pointer;
+}
+
 #outputEst,
 .art2>label {
     font-weight: 600;
