@@ -5,10 +5,12 @@ let rBoxJaNein;
 
 function fn_show_splitting_div() {
     document.getElementById('splitting_div').style.display = 'grid';
+    document.getElementById('inputZve').disabled = true;
 }
 
 function fn_hide_splitting_div() {
     document.getElementById('splitting_div').style.display = 'none';
+    document.getElementById('inputZve').disabled = false;
 }
 
 
